@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Empire Moorish - Moroccan Historical Encyclopedia covering dynasties, architecture, manuscripts, and heritage.">
+    <title>Empire Moorish | Moroccan History, Arts & Heritage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>EMPIRE MOORISH</h1>
+        <p>Moroccan History, Imperial Dynasties & Architectural Heritage</p>
+    </header>
+
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="#latest" onclick="filterArticles('Dynasties')">Dynasties</a>
+        <a href="#latest" onclick="filterArticles('Architecture')">Architecture</a>
+        <a href="#latest" onclick="filterArticles('Manuscripts & Diplomacy')">Manuscripts & Diplomacy</a>
+        <a href="quiz.html">History Quiz</a>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()">
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Featured Section -->
+        <section>
+            <div class="section-header">
+                <h2>Featured Stories</h2>
+            </div>
+            <div class="featured-grid" id="featuredContainer"></div>
+        </section>
+
+        <!-- Latest Articles with Category Filters -->
+        <section id="latest">
+            <div class="section-header">
+                <h2>Latest Articles</h2>
+            </div>
+
+            <div class="filter-tabs" id="filterTabs">
+                <button class="filter-btn active" onclick="filterArticles('All', this)">All</button>
+                <button class="filter-btn" onclick="filterArticles('Dynasties', this)">Dynasties</button>
+                <button class="filter-btn" onclick="filterArticles('Architecture', this)">Architecture</button>
+                <button class="filter-btn" onclick="filterArticles('Manuscripts & Diplomacy', this)">Manuscripts & Diplomacy</button>
+            </div>
+
+            <div class="articles-grid" id="articlesContainer"></div>
+        </section>
+
+        <!-- Interactive Quiz Callout -->
+        <section class="quiz-banner">
+            <h2>The Moroccan History Challenge</h2>
+            <p>Test your knowledge of Moroccan dynasties, imperial cities, battles, and monuments in our interactive quiz.</p>
+            <a href="quiz.html" class="btn-gold">Start the Quiz →</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>EMPIRE MOORISH</h3>
+                <p>An independent digital encyclopedia dedicated to Moroccan history, imperial dynasties, and traditional architecture.</p>
+            </div>
+            <div>
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#latest" onclick="filterArticles('Dynasties')">Dynasties</a></li>
+                    <li><a href="#latest" onclick="filterArticles('Architecture')">Architecture</a></li>
+                    <li><a href="#latest" onclick="filterArticles('Manuscripts & Diplomacy')">Manuscripts & Diplomacy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="quiz.html">History Quiz</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Empire Moorish · All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="articles.js"></script>
+    <script>
+        function renderFeatured() {
+            const featured = ARTICLES.filter(a => a.featured).slice(0, 3);
+            if (!featured.length) return;
+
+            const mainFeat = featured[0];
+            const sideFeats = featured.slice(1);
+
+            document.getElementById("featuredContainer").innerHTML = `
+                <a href="article.html?id=${mainFeat.id}" class="feat-card">
+                    <img src="${mainFeat.image}" alt="${mainFeat.title}">
+                    <div class="feat-body">
+                        <span class="cat-tag">${mainFeat.category}</span>
+                        <h3>${mainFeat.title}</h3>
+                        <p>${mainFeat.excerpt}</p>
+                    </div>
+                </a>
+                <div class="featured-side">
+                    ${sideFeats.map(item => `
+                        <a href="article.html?id=${item.id}" class="feat-card">
+                            <img src="${item.image}" alt="${item.title}">
+                            <div class="feat-body">
+                                <span class="cat-tag">${item.category}</span>
+                                <h3>${item.title}</h3>
+                            </div>
+                        </a>
+                    `).join("")}
+                </div>
+            `;
+        }
+
+        function renderArticles(list) {
+            const container = document.getElementById("articlesContainer");
+            if (!list.length) {
+                container.innerHTML = "<p>No articles found matching your search.</p>";
+                return;
+            }
+            container.innerHTML = list.map(article => `
+                <article class="article-card">
+                    <div>
+                        <img src="${article.image}" alt="${article.title}">
+                        <div class="article-content">
+                            <span class="cat-tag">${article.category}</span>
+                            <h3>${article.title}</h3>
+                            <p>${article.excerpt}</p>
+                        </div>
+                    </div>
+                    <div class="article-meta">
+                        <span>${article.date}</span>
+                        <a href="article.html?id=${article.id}" class="read-more">Read →</a>
+                    </div>
+                </article>
+            `).join("");
+        }
+
+        function filterArticles(category, btn) {
+            if (btn) {
+                document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+            }
+            const filtered = category === "All"
+                ? ARTICLES
+                : ARTICLES.filter(a => a.category === category);
+            renderArticles(filtered);
+        }
+
+        function searchArticles() {
+            const q = document.getElementById("searchInput").value.toLowerCase();
+            const filtered = ARTICLES.filter(a =>
+                a.title.toLowerCase().includes(q) ||
+                a.excerpt.toLowerCase().includes(q) ||
+                a.category.toLowerCase().includes(q)
+            );
+            renderArticles(filtered);
+        }
+
+        renderFeatured();
+        renderArticles(ARTICLES);
+    </script>
+</body>
+</html>

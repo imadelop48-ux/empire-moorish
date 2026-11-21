@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Quiz | Empire Moorish</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>EMPIRE MOORISH</h1>
+        <p>The Moroccan History Challenge</p>
+    </header>
+
+    <nav>
+        <a href="index.html">← Back to Home</a>
+    </nav>
+
+    <main class="container">
+        <div class="article-single" id="quizBox">
+            <span class="cat-tag">Interactive Quiz</span>
+            <h1 id="qTitle">Question 1 of 4</h1>
+            <p id="qText" style="font-size:1.15rem; margin: 18px 0; font-weight:600;"></p>
+            <div id="qOptions" style="display:flex; flex-direction:column; gap:12px;"></div>
+            <p id="qFeedback" style="margin-top:18px; font-weight:600;"></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            © 2026 Empire Moorish · All Rights Reserved
+        </div>
+    </footer>
+
+    <script>
+        const QUESTIONS = [
+            {
+                q: "Which city did Idris II expand into a major capital of the Idrisid dynasty?",
+                options: ["Marrakech", "Fez", "Meknes", "Rabat"],
+                answer: 1
+            },
+            {
+                q: "Who founded Marrakech and commanded the Almoravid forces at the Battle of Sagrajas (1086)?",
+                options: ["Yusuf ibn Tashfin", "Yaqub al-Mansur", "Moulay Ismail", "Abu Inan Faris"],
+                answer: 0
+            },
+            {
+                q: "In which year did the Saadian victory at the Battle of Wadi al-Makhazin take place?",
+                options: ["1195 CE", "1492 CE", "1578 CE", "1666 CE"],
+                answer: 2
+            },
+            {
+                q: "Which Alaouite sultan made Meknes his grand imperial capital?",
+                options: ["Moulay Ismail", "Ibn Tumart", "Abdallah ibn Yasin", "Idris I"],
+                answer: 0
+            }
+        ];
+
+        let current = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            const item = QUESTIONS[current];
+            document.getElementById("qTitle").textContent = `Question ${current + 1} of ${QUESTIONS.length}`;
+            document.getElementById("qText").textContent = item.q;
+            document.getElementById("qFeedback").textContent = "";
+            document.getElementById("qOptions").innerHTML = item.options.map((opt, idx) => `
+                <button class="filter-btn" style="text-align:left; padding:14px 18px; border-radius:8px;" onclick="checkAnswer(${idx})">
+                    ${opt}
+                </button>
+            `).join("");
+        }
+
+        function checkAnswer(idx) {
+            const item = QUESTIONS[current];
+            const feedback = document.getElementById("qFeedback");
+            if (idx === item.answer) {
+                score++;
+                feedback.style.color = "#123d2c";
+                feedback.textContent = "Correct!";
+            } else {
+                feedback.style.color = "#a12626";
+                feedback.textContent = `Incorrect. The right answer is: ${item.options[item.answer]}`;
+            }
+
+            setTimeout(() => {
+                current++;
+                if (current < QUESTIONS.length) {
+                    loadQuestion();
+                } else {
+                    document.getElementById("quizBox").innerHTML = `
+                        <span class="cat-tag">Quiz Completed</span>
+                        <h1>Your Score: ${score} / ${QUESTIONS.length}</h1>
+                        <p style="margin:15px 0;">Thank you for testing your knowledge of Moroccan history on Empire Moorish.</p>
+                        <a href="index.html" class="btn-gold">Back to Articles</a>
+                    `;
+                }
+            }, 1100);
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>
