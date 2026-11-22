@@ -5,7 +5,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: true,
-        image: "images/mauretania.jpg",
+        image: "mauretania.jpg",
         excerpt: "Tracing the ancient Moroccan kingdom from the 6th and 5th centuries BCE—from Atlas, Antaeus, and the Mzoura tumulus near Larache to King Baga, Bocchus I, Juba II, and Ptolemy.",
         content: [
             "The historical roots of the ancient Moroccan Kingdom of Mauretania extend back to the 6th and 5th centuries BCE across northwestern Morocco, an era marked by the rise of indigenous Mauri polities alongside flourishing Atlantic and Mediterranean centers such as Tingis (Tangier), Lixus, Volubilis (Walili), and Sala.",
@@ -21,7 +21,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: true,
-        image: "images/baquates.jpg",
+        image: "baquates.jpg",
         excerpt: "Documented on the famous Volubilis altars, this indigenous Moroccan kingdom maintained sovereignty and negotiated treaties as equals.",
         content: [
             "Following the Roman annexation of northern Mauretania, the Kingdom of the Baquates emerged as a powerful indigenous Moroccan kingdom centered in the Middle Atlas and the plains around Volubilis.",
@@ -35,23 +35,23 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: true,
-        image: "images/fez-medina.jpg",
+        image: "fez-medina.jpg",
         excerpt: "The first centralized Islamic Moroccan kingdom to unify Morocco, ruling from Tangier and Ghomara in the north to the Chelif in the east and the Sahara to the borders of Bilad al-Sudan.",
         gallery: [
             {
-                src: "images/fez-medina.jpg",
+                src: "fez-medina.jpg",
                 caption: "Panoramic view of the historic medina of Fez, established as a central Idrisid capital."
             },
             {
-                src: "images/idrisid-map-zoom.jpg",
+                src: "idrisid-map-zoom.jpg",
                 caption: "Historical map detail showing the Idrisid realm (Royaume des Edrissites), Fez, and Tangier."
             },
             {
-                src: "images/idrisid-map-full.jpg",
+                src: "idrisid-map-full.jpg",
                 caption: "Broader late-9th-century map situating the Idrisid kingdom across the western Mediterranean."
             },
             {
-                src: "images/idrisid-coin.jpg",
+                src: "idrisid-coin.jpg",
                 caption: "Historical silver coinage illustrating minting traditions and numismatic heritage."
             }
         ],
@@ -67,7 +67,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "images/miknasa.jpg",
+        image: "miknasa.jpg",
         excerpt: "Examining the Miknasa Moroccan kingdom and its political force across Sijilmasa, Meknes, and northern Morocco.",
         content: [
             "The Miknasa emerged as a distinct Amazigh Moroccan kingdom in medieval Morocco with notable political and military influence across key regional centers.",
@@ -81,7 +81,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "images/maghrawa.jpg",
+        image: "maghrawa.jpg",
         excerpt: "With Fez as their capital, the Maghrawa Moroccan kingdom ruled central, western, and southern Morocco from Tlemcen to Draa, extending as far east as the Aurès under Ziri ibn Atiyya.",
         content: [
             "The Maghrawa formed a powerful Amazigh Moroccan kingdom that ruled central, western, and southern Morocco—encompassing Morocco as a whole—from Tlemcen in the east to the Draa Valley in the south, with Fez serving as their imperial capital.",
@@ -95,7 +95,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "images/almoravids.jpg",
+        image: "almoravids.jpg",
         excerpt: "Founded by Abdallah ibn Yasin and expanded under Yusuf ibn Tashfin, this Moroccan empire built Marrakech and unified the western Mediterranean.",
         content: [
             "Originating in the 11th century, the Almoravid Moroccan empire was founded by Abdallah ibn Yasin, who unified the Sanhaja tribes and laid the institutional foundations of the state.",
@@ -109,7 +109,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "images/almohads.jpg",
+        image: "almohads.jpg",
         excerpt: "Founded in the High Atlas by Ibn Tumart and consolidated under Abd al-Mu'min, this Moroccan empire reshaped North African and Andalusi architecture.",
         content: [
             "Emerging in the High Atlas Mountains during the 12th century, the Almohad Moroccan empire was founded by Ibn Tumart and expanded into a vast caliphate under his successor Abd al-Mu'min ibn Ali.",
@@ -123,7 +123,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "images/marinids.jpg",
+        image: "marinids.jpg",
         excerpt: "How the sultans of this Moroccan empire like Abu Inan Faris elevated carved cedarwood, stucco, and zellige craftsmanship in Fez.",
         content: [
             "Rising to power in the 13th century, the Marinid Moroccan empire made Fez its imperial capital and built the royal city of Fez el-Jdid.",
@@ -137,7 +137,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "images/wattasids.jpg",
+        image: "wattasids.jpg",
         excerpt: "Tracing the transition from Marinid viziers to Wattasid sultans of this Moroccan kingdom in Fez amid 15th- and 16th-century coastal pressures.",
         content: [
             "Emerging from the Marinid administration as viziers, the Wattasid Moroccan kingdom consolidated power in Fez during the 15th century under rulers such as Muhammad al-Shaykh.",
@@ -151,7 +151,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "images/saadians.jpg",
+        image: "saadians.jpg",
         excerpt: "Ahmad al-Mansur al-Dhahabi consolidated the independence of this Moroccan empire and restored Marrakech as a brilliant royal capital.",
         content: [
             "Emerging in southern Morocco in the 16th century, the Saadian Moroccan empire unified the country and defended its sovereignty against foreign expansion.",
@@ -165,12 +165,14 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "images/alaouites.jpg",
+        image: "alaouites.jpg",
         excerpt: "From Moulay Rashid and Moulay Ismail's capital at Meknes to the modern and contemporary path of the Moroccan Kingdom.",
         content: [
             "Originating in Tafilalt in the 17th century, the Alaouite dynasty reunified the Moroccan Kingdom and laid the foundations of the modern state.",
             "Moulay Rashid established central authority, while Moulay Ismail fortified the Moroccan empire and transformed Meknes into a grand imperial capital.",
             "Across subsequent centuries—under rulers such as Sultan Mohammed III and Hassan I—the dynasty steered the Moroccan Kingdom into the modern and contemporary era."
         ]
+    }
+];
     }
 ];
