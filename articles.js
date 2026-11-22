@@ -102,7 +102,6 @@ const ARTICLES = [
             "Under Yusuf ibn Tashfin, this Moroccan empire established Marrakech as its imperial capital and expanded across Morocco and into Al-Andalus, securing a decisive victory at the Battle of Sagrajas (Al-Zallaqah) in 1086 CE.",
             "Marrakech quickly became a monumental political and economic hub linking trans-Saharan routes with the Mediterranean."
         ]
-        ]
     },
     {
         id: "almohad-caliphate-monuments",
