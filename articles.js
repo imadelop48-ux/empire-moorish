@@ -96,11 +96,12 @@ const ARTICLES = [
         date: "November 21, 2026",
         featured: false,
         image: "images (19).jpg",
-        excerpt: "Founded by Abdallah ibn Yasin and expanded under Yusuf ibn Tashfin, this Moroccan empire built Marrakech and unified the western Mediterranean.",
+        excerpt: "Emerging from the Moroccan Sahara, this empire—founded by Abdallah ibn Yasin and expanded under Yusuf ibn Tashfin—built Marrakech and unified the western Mediterranean.",
         content: [
-            "Originating in the 11th century, the Almoravid Moroccan empire was founded by Abdallah ibn Yasin, who unified the Sanhaja tribes and laid the institutional foundations of the state.",
+            "Originating in the 11th century, the Almoravid Moroccan empire was founded by Abdallah ibn Yasin, who unified the Sanhaja tribes—who set out from southern Morocco, specifically from the region between Souss and northern Saguia el-Hamra in the Moroccan Sahara—and laid the institutional foundations of the state.",
             "Under Yusuf ibn Tashfin, this Moroccan empire established Marrakech as its imperial capital and expanded across Morocco and into Al-Andalus, securing a decisive victory at the Battle of Sagrajas (Al-Zallaqah) in 1086 CE.",
             "Marrakech quickly became a monumental political and economic hub linking trans-Saharan routes with the Mediterranean."
+        ]
         ]
     },
     {
