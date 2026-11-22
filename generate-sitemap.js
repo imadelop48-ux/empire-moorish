@@ -1,92 +1,70 @@
 
 const fs = require("fs");
 const path = require("path");
-const { ARTICLES } = require("./articles.js");
 
-const BASE = "https://imadelop48-ux.github.io/empire-moorish";
+const SITE_URL = "https://imadelop48-ux.github.io/empire-moorish";
 
-const staticPages = [
-    "",
-    "quiz.html",
-    "archive.html",
-    "idrissids.html",
-    "almoravids.html",
-    "almohads.html",
-    "alaouites.html"
+const rootDir = __dirname;
+const articlesDir = path.join(rootDir, "articles");
+
+const urls = [
+    {
+        loc: `${SITE_URL}/`,
+        priority: "1.0"
+    }
 ];
 
-// Add only pages that actually exist.
-const urls = staticPages
-    .filter(page => fs.existsSync(path.join(__dirname, page || "index.html")))
-    .map(page => `${BASE}/${page}`);
+// Add existing static HTML pages from the root directory.
+const excludedFiles = [
+    "article.html"
+];
 
-for (const article of ARTICLES) {
-    const file = path.join(
-        __dirname,
-        "articles",
-        `${article.id}.html`
-    );
+const rootFiles = fs.readdirSync(rootDir);
 
-    if (fs.existsSync(file)) {
-        urls.push(`${BASE}/articles/${article.id}.html`);
+for (const file of rootFiles) {
+    if (
+        file.endsWith(".html") &&
+        file !== "index.html" &&
+        !excludedFiles.includes(file)
+    ) {
+        urls.push({
+            loc: `${SITE_URL}/${file}`,
+            priority: "0.7"
+        });
     }
 }
 
-const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map(url => `    <url><loc>${url}</loc></url>`).join("\n")}
-</urlset>`;
+// Add generated article pages.
+if (fs.existsSync(articlesDir)) {
+    const articleFiles = fs.readdirSync(articlesDir);
 
-fs.writeFileSync(
-    path.join(__dirname, "sitemap.xml"),
-    xml,
-    "utf8"
-);
-
-console.log(`Sitemap created with ${urls.length} URLs.`);
-
-const fs = require("fs");
-const path = require("path");
-const { ARTICLES } = require("./articles.js");
-
-const BASE = "https://imadelop48-ux.github.io/empire-moorish";
-
-const staticPages = [
-    "",
-    "quiz.html",
-    "archive.html",
-    "idrissids.html",
-    "almoravids.html",
-    "almohads.html",
-    "alaouites.html"
-];
-
-// Add only pages that actually exist.
-const urls = staticPages
-    .filter(page => fs.existsSync(path.join(__dirname, page || "index.html")))
-    .map(page => `${BASE}/${page}`);
-
-for (const article of ARTICLES) {
-    const file = path.join(
-        __dirname,
-        "articles",
-        `${article.id}.html`
-    );
-
-    if (fs.existsSync(file)) {
-        urls.push(`${BASE}/articles/${article.id}.html`);
+    for (const file of articleFiles) {
+        if (file.endsWith(".html")) {
+            urls.push({
+                loc: `${SITE_URL}/articles/${file}`,
+                priority: "0.8"
+            });
+        }
     }
 }
 
-const xml = `<?xml version="1.0" encoding="UTF-8"?>
+const today = new Date().toISOString().split("T")[0];
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map(url => `    <url><loc>${url}</loc></url>`).join("\n")}
-</urlset>`;
+${urls.map(url => `    <url>
+        <loc>${url.loc}</loc>
+        <lastmod>${today}</lastmod>
+        <priority>${url.priority}</priority>
+    </url>`).join("\n")}
+</urlset>
+`;
 
 fs.writeFileSync(
-    path.join(__dirname, "sitemap.xml"),
-    xml,
+    path.join(rootDir, "sitemap.xml"),
+    sitemap,
     "utf8"
 );
 
-console.log(`Sitemap created with ${urls.length} URLs.`);
+console.log(`Sitemap generated successfully with ${urls.length} URLs.`);
+
