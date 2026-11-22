@@ -5,7 +5,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: true,
-        image: "mauretania.jpg",
+        image: "volubilis-mauretania.jpg",
         excerpt: "Tracing the ancient Moroccan kingdom from the 6th and 5th centuries BCE—from Atlas, Antaeus, and the Mzoura tumulus near Larache to King Baga, Bocchus I, Juba II, and Ptolemy.",
         content: [
             "The historical roots of the ancient Moroccan Kingdom of Mauretania extend back to the 6th and 5th centuries BCE across northwestern Morocco, an era marked by the rise of indigenous Mauri polities alongside flourishing Atlantic and Mediterranean centers such as Tingis (Tangier), Lixus, Volubilis (Walili), and Sala.",
@@ -21,7 +21,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: true,
-        image: "baquates.jpg",
+        image: "volubilis-baquates.jpg",
         excerpt: "Documented on the famous Volubilis altars, this indigenous Moroccan kingdom maintained sovereignty and negotiated treaties as equals.",
         content: [
             "Following the Roman annexation of northern Mauretania, the Kingdom of the Baquates emerged as a powerful indigenous Moroccan kingdom centered in the Middle Atlas and the plains around Volubilis.",
@@ -109,7 +109,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "almohads.jpg",
+        image: "koutoubia-almohads.jpg",
         excerpt: "Founded in the High Atlas by Ibn Tumart and consolidated under Abd al-Mu'min, this Moroccan empire reshaped North African and Andalusi architecture.",
         content: [
             "Emerging in the High Atlas Mountains during the 12th century, the Almohad Moroccan empire was founded by Ibn Tumart and expanded into a vast caliphate under his successor Abd al-Mu'min ibn Ali.",
@@ -123,7 +123,13 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "marinids.jpg",
+        image: "al-attarine-madrasa-1.jpg",
+        gallery: [
+            {
+                src: "al-attarine-madrasa-1.jpg",
+                caption: "Interior courtyard of the Marinid-era Al-Attarine Madrasa in Fez, featuring carved stucco, woodwork, and geometric zellige."
+            }
+        ],
         excerpt: "How the sultans of this Moroccan empire like Abu Inan Faris elevated carved cedarwood, stucco, and zellige craftsmanship in Fez.",
         content: [
             "Rising to power in the 13th century, the Marinid Moroccan empire made Fez its imperial capital and built the royal city of Fez el-Jdid.",
@@ -151,7 +157,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "saadians.jpg",
+        image: "el-badi-saadians.jpg",
         excerpt: "Ahmad al-Mansur al-Dhahabi consolidated the independence of this Moroccan empire and restored Marrakech as a brilliant royal capital.",
         content: [
             "Emerging in southern Morocco in the 16th century, the Saadian Moroccan empire unified the country and defended its sovereignty against foreign expansion.",
@@ -165,7 +171,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "alaouites.jpg",
+        image: "bab-mansour-alaouites.jpg",
         excerpt: "From Moulay Rashid and Moulay Ismail's capital at Meknes to the modern and contemporary path of the Moroccan Kingdom.",
         content: [
             "Originating in Tafilalt in the 17th century, the Alaouite dynasty reunified the Moroccan Kingdom and laid the foundations of the modern state.",
