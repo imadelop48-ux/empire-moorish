@@ -67,7 +67,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "miknasa.jpg",
+        image: "images (20).jpg",
         excerpt: "Examining the Miknasa Moroccan kingdom and its political force across Sijilmasa, Meknes, and northern Morocco.",
         content: [
             "The Miknasa emerged as a distinct Amazigh Moroccan kingdom in medieval Morocco with notable political and military influence across key regional centers.",
@@ -81,7 +81,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "maghrawa.jpg",
+        image: "images (20).jpg",
         excerpt: "With Fez as their capital, the Maghrawa Moroccan kingdom ruled central, western, and southern Morocco from Tlemcen to Draa, extending as far east as the Aurès under Ziri ibn Atiyya.",
         content: [
             "The Maghrawa formed a powerful Amazigh Moroccan kingdom that ruled central, western, and southern Morocco—encompassing Morocco as a whole—from Tlemcen in the east to the Draa Valley in the south, with Fez serving as their imperial capital.",
@@ -95,7 +95,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "almoravids.jpg",
+        image: "images (19).jpg",
         excerpt: "Founded by Abdallah ibn Yasin and expanded under Yusuf ibn Tashfin, this Moroccan empire built Marrakech and unified the western Mediterranean.",
         content: [
             "Originating in the 11th century, the Almoravid Moroccan empire was founded by Abdallah ibn Yasin, who unified the Sanhaja tribes and laid the institutional foundations of the state.",
@@ -143,7 +143,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "wattasids.jpg",
+        image: "images (20).jpg",
         excerpt: "Tracing the transition from Marinid viziers to Wattasid sultans of this Moroccan kingdom in Fez amid 15th- and 16th-century coastal pressures.",
         content: [
             "Emerging from the Marinid administration as viziers, the Wattasid Moroccan kingdom consolidated power in Fez during the 15th century under rulers such as Muhammad al-Shaykh.",
