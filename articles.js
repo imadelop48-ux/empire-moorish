@@ -178,5 +178,12 @@ const ARTICLES = [
             "Moulay Rashid established central authority, while Moulay Ismail fortified the Moroccan empire and transformed Meknes into a grand imperial capital.",
             "Across subsequent centuries—under rulers such as Sultan Mohammed III and Hassan I—the dynasty steered the Moroccan Kingdom into the modern and contemporary era."
         ]
+        
+// Export article data for the static page generator.
+// This does not change any article content.
+if (typeof module !== "undefined" && module.exports) {
+    module.exports = { ARTICLES };
+}
+
     }
 ];
