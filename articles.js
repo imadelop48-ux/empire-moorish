@@ -5,7 +5,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: true,
-        image: "volubilis-mauretania.jpg",
+        image: "images (18).jfif",
         excerpt: "Tracing the ancient Moroccan kingdom from the 6th and 5th centuries BCE—from Atlas, Antaeus, and the Mzoura tumulus near Larache to King Baga, Bocchus I, Juba II, and Ptolemy.",
         content: [
             "The historical roots of the ancient Moroccan Kingdom of Mauretania extend back to the 6th and 5th centuries BCE across northwestern Morocco, an era marked by the rise of indigenous Mauri polities alongside flourishing Atlantic and Mediterranean centers such as Tingis (Tangier), Lixus, Volubilis (Walili), and Sala.",
@@ -21,7 +21,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: true,
-        image: "volubilis-baquates.jpg",
+        image: "Volubilis_Longshot_II.jpg",
         excerpt: "Documented on the famous Volubilis altars, this indigenous Moroccan kingdom maintained sovereignty and negotiated treaties as equals.",
         content: [
             "Following the Roman annexation of northern Mauretania, the Kingdom of the Baquates emerged as a powerful indigenous Moroccan kingdom centered in the Middle Atlas and the plains around Volubilis.",
@@ -109,7 +109,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "koutoubia-almohads.jpg",
+        image: "894d31_cda75ba3813d441fbdd6fdba8488b828~mv2.avif",
         excerpt: "Founded in the High Atlas by Ibn Tumart and consolidated under Abd al-Mu'min, this Moroccan empire reshaped North African and Andalusi architecture.",
         content: [
             "Emerging in the High Atlas Mountains during the 12th century, the Almohad Moroccan empire was founded by Ibn Tumart and expanded into a vast caliphate under his successor Abd al-Mu'min ibn Ali.",
@@ -157,7 +157,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "el-badi-saadians.jpg",
+        image: "images (16).jfif",
         excerpt: "Ahmad al-Mansur al-Dhahabi consolidated the independence of this Moroccan empire and restored Marrakech as a brilliant royal capital.",
         content: [
             "Emerging in southern Morocco in the 16th century, the Saadian Moroccan empire unified the country and defended its sovereignty against foreign expansion.",
@@ -171,7 +171,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "bab-mansour-alaouites.jpg",
+        image: "images (17).jfif",
         excerpt: "From Moulay Rashid and Moulay Ismail's capital at Meknes to the modern and contemporary path of the Moroccan Kingdom.",
         content: [
             "Originating in Tafilalt in the 17th century, the Alaouite dynasty reunified the Moroccan Kingdom and laid the foundations of the modern state.",
