@@ -173,7 +173,6 @@ const ARTICLES = [
         featured: false,
         image: "images (17).jpg",
         excerpt: "From Moulay Rashid and Moulay Ismail's capital at Meknes to the modern and contemporary path of the Moroccan Kingdom.",
-      
         content: [
             "Originating in Tafilalt in the 17th century, the Alaouite dynasty reunified the Moroccan Kingdom and laid the foundations of the modern state.",
             "Moulay Rashid established central authority, while Moulay Ismail fortified the Moroccan empire and transformed Meknes into a grand imperial capital.",
