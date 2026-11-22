@@ -5,7 +5,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: true,
-        image: "images (18).jfif",
+        image: "images (18).jpg",
         excerpt: "Tracing the ancient Moroccan kingdom from the 6th and 5th centuries BCE—from Atlas, Antaeus, and the Mzoura tumulus near Larache to King Baga, Bocchus I, Juba II, and Ptolemy.",
         content: [
             "The historical roots of the ancient Moroccan Kingdom of Mauretania extend back to the 6th and 5th centuries BCE across northwestern Morocco, an era marked by the rise of indigenous Mauri polities alongside flourishing Atlantic and Mediterranean centers such as Tingis (Tangier), Lixus, Volubilis (Walili), and Sala.",
@@ -157,7 +157,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "images (16).jfif",
+        image: "images (16).jpg",
         excerpt: "Ahmad al-Mansur al-Dhahabi consolidated the independence of this Moroccan empire and restored Marrakech as a brilliant royal capital.",
         content: [
             "Emerging in southern Morocco in the 16th century, the Saadian Moroccan empire unified the country and defended its sovereignty against foreign expansion.",
@@ -171,7 +171,7 @@ const ARTICLES = [
         category: "Dynasties",
         date: "November 21, 2026",
         featured: false,
-        image: "images (17).jfif",
+        image: "images (17).jpg",
         excerpt: "From Moulay Rashid and Moulay Ismail's capital at Meknes to the modern and contemporary path of the Moroccan Kingdom.",
         content: [
             "Originating in Tafilalt in the 17th century, the Alaouite dynasty reunified the Moroccan Kingdom and laid the foundations of the modern state.",
