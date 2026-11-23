@@ -181,7 +181,7 @@ const ARTICLES = [
     },
     {
         id: "idrisid-state-sources-and-reach",
-        title: "The True Borders of the Idrisid State: Territorial Reach, Administrative Divisions, and Dynastic Continuity",
+        title: "The True Borders of the Idrisid State",
         category: "Dynasties",
         date: "November 23, 2026",
         featured: false,
